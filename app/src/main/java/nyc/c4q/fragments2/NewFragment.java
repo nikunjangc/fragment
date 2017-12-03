@@ -44,6 +44,8 @@ public class NewFragment extends Fragment {
                 SecondFragment secondFragment= new SecondFragment();
                 FragmentManager fragmentManager= getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+                fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit);
+
                 Bundle bundle=new Bundle();
                 bundle.putString("text01",editText.getText().toString());
                 secondFragment.setArguments(bundle);
